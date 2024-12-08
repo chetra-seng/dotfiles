@@ -130,8 +130,5 @@ esac
 # pnpm end
 
 export WEZTERM_CONFIG_FILE=~/.config/wezterm/.wezterm.lua
-
-if [ -n "$TMUX" ]; then
-  neofetch --ascii ~/dotfiles/cat_ascii
-fi
-
+PATH="$PATH":"$HOME/.local/scripts/"
+bindkey -s ^f "tmux-sessionizer\n"
