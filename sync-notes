@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Define the two folders
+DIR1="/Users/xyz/Dropbox/Obsidian"
+DIR2="/Users/xyz/Library/Mobile Documents/iCloud~md~obsidian/Documents"
+
+# Unison profile or direct call — update if needed
+UNISON_CMD="unison sync_notes"
+
+echo "[INFO] Watching for changes in:"
+echo "  - $DIR1"
+echo "  - $DIR2"
+
+# Watch both folders in parallel
+fswatch -o "$DIR1" "$DIR2" | while read change; do
+    echo "[INFO] Change detected at $(date), syncing..."
+    eval $UNISON_CMD
+done
+
+
+
+
