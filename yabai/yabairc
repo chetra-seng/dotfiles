@@ -1,0 +1,36 @@
+### Automatic commands
+# Start yabai --load-sa automatically after a restart
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
+# Set animation duration
+yabai -m config window_animation_duration 0.2
+
+### Window configuration
+# Window managed by yabai
+yabai -m config layout bsp
+
+# Open new window as second child
+yabai -m config window_placement second_child
+
+# Focus mouse on windows
+yabai -m config mouse_follows_focus on
+
+# Mouse related settings
+yabai -m config mouse_modifier alt
+yabai -m config mouse_action1 move
+yabai -m config mouse_action2 resize
+yabai -m mouse_drop_action swap
+
+# Padding
+yabai -m config bottom_padding 8
+yabai -m config left_padding 8
+yabai -m config right_padding 8
+yabai -m config top_padding 44 # Keep padding top high for custom menu bar
+
+# Window gap
+yabai -m config window_gap 8
+
+### Blacklisted app
+yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^System Settings$" manage=off
