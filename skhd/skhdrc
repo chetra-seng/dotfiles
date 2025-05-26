@@ -4,6 +4,10 @@
 # CTRL keys are commonly asscoiated with moving windows commands
 # ALT keys are commonly asscoiated with focusing windows commands
 
+# Open most used apps
+alt - q : open -a Wezterm
+alt - w : open -a Zen
+alt - e : open -a Finder
 
 # Switch workspace
 alt - 1 : yabai -m space --focus 1
