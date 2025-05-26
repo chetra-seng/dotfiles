@@ -39,10 +39,10 @@ shift + alt - h : yabai -m display --focus west
 shift + alt - l : yabai -m display --focus east
 
 # Move window to desktop screen
-ctrl + alt - k : yabai -m window --display north
-ctrl + alt - j : yabai -m window --display south
-ctrl + alt - h : yabai -m window --display west
-ctrl + alt - l : yabai -m window --display east
+ctrl + alt - k : yabai -m window --display north --focus
+ctrl + alt - j : yabai -m window --display south --focus
+ctrl + alt - h : yabai -m window --display west --focus
+ctrl + alt - l : yabai -m window --display east --focus
 
 # Miror windows
 shift + alt - x : yabai -m space --mirror x-axis
