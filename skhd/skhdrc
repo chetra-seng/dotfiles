@@ -7,7 +7,7 @@
 # Open most used apps
 alt - q : open -n -a Wezterm
 alt - w : open -n -a Zen
-alt - e : open -n -a Finder
+alt - e : open -a Finder
 
 # Switch workspace
 alt - 1 : yabai -m space --focus 1
