@@ -112,23 +112,23 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH="$PATH:/Applications/DataSpell.app/Contents/MacOS"
-
-# bun completions
-[ -s "/Users/chetra_seng/.bun/_bun" ] && source "/Users/chetra_seng/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-# pnpm
-export PNPM_HOME="/Users/chetra_seng/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
+PATH="$PATH":"$HOME/.local/bin/"
 export WEZTERM_CONFIG_FILE=~/.config/wezterm/.wezterm.lua
 PATH="$PATH":"$HOME/.local/scripts/"
 bindkey -s ^f "tmux-sessionizer\n"
+
+# fnm
+FNM_PATH="/home/xyz/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/xyz/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
+
+if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
+  export XDG_SESSION_TYPE=wayland
+  export XDG_CURRENT_DESKTOP=Hyprland
+  export QT_QPA_PLATFORM=wayland
+  export SDL_VIDEODRIVER=wayland
+  # export GBM_BACKEND=nvidia-drm # only if using NVIDIA
+  exec dbus-run-session Hyprland > ~/.cache/hyprland.log 2>&1
+fi
