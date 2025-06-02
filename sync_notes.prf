@@ -1,0 +1,7 @@
+root = /Users/xyz/Dropbox/Obsidian
+root = /Users/xyz/Library/Mobile Documents/iCloud~md~obsidian/Documents
+auto = true
+batch = true
+log = true
+fastcheck = true
+prefer = newer
