@@ -8,3 +8,8 @@ In order to use each dot file, just create a symbolic link with full path, then 
 - Install unison and fswatch via homebroew
 - Copy sync_notes.prf to `~/Library/Application\ Support/Unison`
 - Copy sync-notes to `./local/script/sync-notes`
+
+### Yabai for MacOS
+**Disable "Automatically rearrange Spaces based on most recent use"**  
+Go to System Settings → Desktop & Dock → uncheck "Automatically rearrange Spaces based on most recent use".  
+This prevents macOS from reordering spaces, which helps keep space numbers stable.
