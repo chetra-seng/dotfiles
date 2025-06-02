@@ -16,6 +16,10 @@ alt - 3 : yabai -m space --focus 3
 alt - 4 : yabai -m space --focus 4
 alt - 5 : yabai -m space --focus 5
 alt - 6 : yabai -m space --focus 6
+alt - 7 : yabai -m space --focus 7
+alt - 8 : yabai -m space --focus 8
+alt - 9 : yabai -m space --focus 9
+alt - 0 : yabai -m space --focus 10
 
 # Move workspace to next or prev
 shift + alt - p : yabai -m space --move prev; sketchybar --update
@@ -48,10 +52,14 @@ ctrl + alt - l : yabai -m window --display east --focus
 shift + alt - x : yabai -m space --mirror x-axis
 shift + alt - y : yabai -m space --mirror y-axis
 
-# Move windows to next space
-ctrl - 1 : yabai -m window --space 1 --focus
-ctrl - 2 : yabai -m window --space 2 --focus
-ctrl - 3 : yabai -m window --space 3 --focus
-ctrl - 4 : yabai -m window --space 4 --focus
-ctrl - 5 : yabai -m window --space 5 --focus
-ctrl - 6 : yabai -m window --space 6 --focus
+# Move windows to any spaces
+ctrl - 1 : yabai -m window --space 1 --focus; sketchybar --update
+ctrl - 2 : yabai -m window --space 2 --focus; sketchybar --update
+ctrl - 3 : yabai -m window --space 3 --focus; sketchybar --update
+ctrl - 4 : yabai -m window --space 4 --focus; sketchybar --update
+ctrl - 5 : yabai -m window --space 5 --focus; sketchybar --update
+ctrl - 6 : yabai -m window --space 6 --focus; sketchybar --update
+ctrl - 7 : yabai -m window --space 7 --focus; sketchybar --update
+ctrl - 8 : yabai -m window --space 8 --focus; sketchybar --update
+ctrl - 9 : yabai -m window --space 9 --focus; sketchybar --update
+ctrl - 0 : yabai -m window --space 10 --focus; sketchybar --update
