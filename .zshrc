@@ -76,7 +76,7 @@ plugins=(
   command-not-found
   node
   npm
-  nvm
+  fnm
   brew
   yarn
   docker
@@ -124,11 +124,19 @@ if [ -d "$FNM_PATH" ]; then
   eval "`fnm env`"
 fi
 
-if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
-  export XDG_SESSION_TYPE=wayland
-  export XDG_CURRENT_DESKTOP=Hyprland
-  export QT_QPA_PLATFORM=wayland
-  export SDL_VIDEODRIVER=wayland
-  # export GBM_BACKEND=nvidia-drm # only if using NVIDIA
-  exec dbus-run-session Hyprland > ~/.cache/hyprland.log 2>&1
-fi
+# if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
+#   export XDG_SESSION_TYPE=wayland
+#   export XDG_CURRENT_DESKTOP=Hyprland
+#   export QT_QPA_PLATFORM=wayland
+#   export SDL_VIDEODRIVER=wayland
+#   # export GBM_BACKEND=nvidia-drm # only if using NVIDIA
+#   exec dbus-run-session Hyprland > ~/.cache/hyprland.log 2>&1
+# fi
+
+# pnpm
+export PNPM_HOME="/home/xyz/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
