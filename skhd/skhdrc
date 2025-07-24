@@ -5,7 +5,7 @@
 # ALT keys are commonly asscoiated with focusing windows commands
 
 # Open most used apps
-alt - q : open -n -a Wezterm
+alt - q : open -n -a Ghostty
 alt - w : open -n -a Zen
 alt - e : open -a Finder
 
