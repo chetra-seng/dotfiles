@@ -78,7 +78,6 @@ plugins=(
   npm
   fnm
   brew
-  yarn
   docker
   zsh-autosuggestions
   zsh-syntax-highlighting
