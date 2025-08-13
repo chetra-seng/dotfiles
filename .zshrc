@@ -115,7 +115,7 @@ PATH="$PATH":"$HOME/.local/bin/"
 export WEZTERM_CONFIG_FILE=~/.config/wezterm/.wezterm.lua
 PATH="$PATH":"$HOME/.local/scripts/"
 bindkey -s ^f "tmux-sessionizer\n"
-bindkey -s ^Y "yazi-tmux\n"
+bindkey -s ^y "yazi-tmux\n"
 
 # fnm
 FNM_PATH="/home/xyz/.local/share/fnm"
