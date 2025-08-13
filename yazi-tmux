@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Check if session exists, create if not
+if ! tmux has-session -t yazi 2>/dev/null; then
+  tmux new-session -d -s yazi 'yazi'
+fi
+
+# If inside tmux, switch client, else attach
+if [ -n "$TMUX" ]; then
+  tmux switch-client -t yazi
+else
+  tmux attach-session -t yazi
+fi
+
